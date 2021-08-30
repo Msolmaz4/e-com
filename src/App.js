@@ -20,9 +20,10 @@ function App() {
         <React.Fragment>
           <Navbar/>
          <Switch>
-          <Route path='/' component={ProductList}/>
-          <Route path='/details' component={Details}/>
+         <Route  exact path='/' component={ProductList}/> 
+         <Route path='/details' component={Details}/>
           <Route path='/cart' component={Cart}/>
+         
           <Route component={Default}/> 
 
          </Switch>
