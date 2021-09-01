@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import logo from '../logo.svg'
-import styled from 'styled-components'
+/*import styled from 'styled-components'*/
 import { ButtonContainer } from './Button'
 /*npm install  --save styled-components button fur*/
+import styled from 'styled-components'
 
 
 
@@ -11,7 +12,7 @@ import { ButtonContainer } from './Button'
 export default class Navbar extends Component {
     render() {
         return (
-            <nav className='navbar navbar-expend-sm bg-primary navbar-dark px-sm-5'>
+            <NavWrapper className='navbar navbar-expend-sm  navbar-dark px-sm-5'>
                 <Link to='/'>
                     <img src={logo} alt='store' className='navbar-brand'/>
                 </Link>
@@ -33,10 +34,18 @@ export default class Navbar extends Component {
               </Link>
 
 
-            </nav>
+            </NavWrapper>
               
             
         )
     }
 }
+
+const NavWrapper=styled.nav`
+ background: var(--mainBlue);
+ .nav-link {
+     color: var(--mainWhite);
+ }
+
+`;
 
